@@ -9,3 +9,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Created Chrony Install for Debian and RedHat distros
 - Created configuration file and exposed variables
 - Setup defaults to `pool.ntp.org`
+
+### Fixed
+- Ensure `become: true` is defined

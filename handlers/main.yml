@@ -3,8 +3,10 @@
   service:
     name: chrony
     state: restarted
+  become: true
 
 - name: restart chronyd
   service:
     name: chronyd
     state: restarted
+  become: true
