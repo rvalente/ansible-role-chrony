@@ -1,0 +1,6 @@
+---
+chrony_logdir: /var/log/chrony
+chrony_driftfile: /var/lib/chrony/chrony.drift
+chrony_keyfile: /etc/chrony/chrony.keys
+chrony_dumpdir: /var/lib/chrony
+chrony_hwclockfile: /etc/adjtime

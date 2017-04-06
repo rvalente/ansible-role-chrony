@@ -1,0 +1,24 @@
+# {{ ansible_managed }}
+
+{% for srv in ntp_servers %}
+server {{ srv }} iburst
+{% endfor %}
+
+keyfile {{ chrony_keyfile }}
+commandkey 1
+
+driftfile {{ chrony_driftfile }}
+log tracking measurements statistics
+logdir {{ chrony_logdir }}
+
+maxupdateskew 100.0
+dumponexit
+dumpdir {{ chrony_dumpdir }}
+
+logchange 0.5
+
+{% if mailonchange is defined %}
+mailonchange root@localhost 0.5
+{% endif %}
+
+rtcsync
