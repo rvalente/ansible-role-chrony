@@ -16,3 +16,4 @@
     name: chronyd
     state: started
     enabled: yes
+  become: true
