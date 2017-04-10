@@ -9,6 +9,7 @@
   template:
     src: chrony.conf.RedHat.j2
     dest: /etc/chrony.conf
+  become: true
   notify: restart chronyd
 
 - name: start chronyd
